@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Disciplinas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Incluir Nova Disciplina</h2>
+
+        <div id="alerta" class="alerta oculto"></div>
+
+        <form id="form-disciplina">
+            <div class="form-linha">
+                <div class="form-group">
+                    <label for="sigla">Sigla</label>
+                    <input type="text" id="sigla" maxlength="15" placeholder="Ex: 3DAW" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carga_horaria">Carga Horária (h)</label>
+                    <input type="number" id="carga_horaria" min="1" placeholder="Ex: 80" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="nome">Nome da Disciplina</label>
+                <input type="text" id="nome" maxlength="120" placeholder="Ex: Desenvolvimento de Aplicações Web" required>
+            </div>
+
+            <div class="acoes">
+                <button type="reset" class="btn">Limpar</button>
+                <button type="submit" class="btn btn-salvar">Salvar Disciplina</button>
+            </div>
+        </form>
+
+        <hr class="divisor">
+
+        <h3>Disciplinas Cadastradas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Sigla</th>
+                    <th>Nome</th>
+                    <th>Carga Horária</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-corpo">
+                <tr><td colspan="4">Carregando...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
